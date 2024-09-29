@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo1.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="menu.html"><i class="fa fa-bars"></i> Menu</a></li>
+                <li><a href="gallery.html"><i class="fa fa-file-image-o"></i> Gallery</a></li>
+                <li><a href="service.html"><i class="fa fa-snowflake-o"></i> Service</a></li>
+                <li><a href="c.html"><i class="fa fa-phone"></i> Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-info">
+            <div class="card">
+                <i class="card-icon fa fa-envelope"></i>
+                <p>gryffindor@gmail.com</p>
+            </div>
+            <div class="card">
+                <i class="card-icon fa fa-phone"></i>
+                <p>+91 8345678909</p>
+            </div>
+            <div class="card">
+                <i class="card-icon fa fa-map-marker"></i>
+                <p>Coimbatore, Tamilnadu</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h1><span>Contact</span> Us</h1>
+            </div>
+            <div class="underline"></div>
+            <div class="row">
+                <h4>Order, Eat and Enjoy</h4>
+            </div>
+
+            <form id="contact-form">
+                <div class="input-container">
+                    <div class="col-1">
+                    <div class="styled-input wide">
+                        <input type="text" id="name" required />
+                        <label for="name">Name</label>
+                    </div>
+                    </div>
+                    <div class="col-2">
+                    <div class="styled-input" style="float: right;">
+                        <input type="email" id="email" required />
+                        <label for="email">Email</label>
+                    </div>
+                    </div>
+                    <div class="col-2">
+                    <div class="styled-input">
+                        <input type="tel" id="phone" required />
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    </div>
+                    <div class="col-2">
+                    <div class="styled-input wide">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    </div>
+                    <div class="submit-btn" style="float: right;" onclick="submitForm()">Send Message</div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateEmail(email) {
+            // Basic email regex validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function validatePhoneNumber(phone) {
+            // Check if phone number is exactly 10 digits
+            const phoneRegex = /^\d{10}$/;
+            return phoneRegex.test(phone);
+        }
+
+        function submitForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name.length < 6) {
+                alert('Name must be at least 6 letters long.');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            if (!validatePhoneNumber(phone)) {
+                alert('Phone number must be exactly 10 digits.');
+                return;
+            }
+
+            if (message === '') {
+                alert('Please enter your message.');
+                return;
+            }
+
+            // If all validations pass
+            alert('Your message has been sent!');
+            document.getElementById('contact-form').reset();
+            
+            // Redirect to home page after 2 seconds
+            setTimeout(function() {
+                window.location.href = 'home.html';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

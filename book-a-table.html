@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book A Table</title>
+    <link rel="stylesheet" href="book-a-table.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="banner">
+
+        <div class="navbar">
+
+            <img src="logo1.png" class="logo">
+
+            <ul>
+                <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="menu.html"><i class="fa fa-bars"></i> Menu</a></li>
+                <li><a href="gallery.html"><i class="fa fa-file-image-o"></i> Gallery</a></li>
+                <li><a href="service.html"><i class="fa fa-snowflake-o"></i> Service</a></li>
+                <li><a href="c.html"><i class="fa fa-phone"></i> Contact</a></li>
+            </ul>
+        </div>
+
+        
+    <div class="booking-container">
+        <header>
+            <h1><span>Book</span> A <span>Table</span></h1>
+            <p>Fill out the form to reserve your table</p>
+        </header>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            
+            <label for="people">Number of People:</label>
+            <input type="number" id="people" name="people" min="1" required>
+            
+            <button type="submit">Submit Booking</button>
+        </form>
+    </div>
+</div>
+    <script src="book-a-table.js"></script>
+</body>
+</html>

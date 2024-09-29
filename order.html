@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+    <link rel="stylesheet" href="order.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="banner">
+
+        <div class="navbar">
+
+            <img src="logo1.png" class="logo">
+
+            <ul>
+                <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="menu.html"><i class="fa fa-bars"></i> Menu</a></li>
+                <li><a href="gallery.html"><i class="fa fa-file-image-o"></i> Gallery</a></li>
+                <li><a href="service.html"><i class="fa fa-snowflake-o"></i> Service</a></li>
+                <li><a href="c.html"><i class="fa fa-phone"></i> Contact</a></li>
+            </ul>
+        </div>
+        <div class="contact-info">
+
+            <div class="card">
+                <i class="card-icon fa fa-envelope"></i>
+                <p>gryffindor@gmail.com</p>
+            </div>
+
+            <div class="card">
+                <i class="card-icon fa fa-phone"></i>
+                <p>+91 8345678909</p>
+            </div>
+
+            <div class="card">
+                <i class="card-icon fa fa-map-marker"></i>
+                <p>Coimbatore, Tamilnadu</p>
+            </div>
+        </div>
+    <div class="order-container">
+        <header>
+            <h1>Order <span>Your</span> Food</h1>
+            <p>Fill out the form to place your order</p>
+        </header>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+           <div id="itemsContainer">
+                    <div class="item-container">
+                        <label for="food1">Food Item:</label>
+                        <input type="text" id="food1" name="food1" placeholder="Food item e.g., Idli" required>
+                        <label for="quantity1">Quantity:</label>
+                        <input type="number" id="quantity1" name="quantity1" min="1" required>
+                    </div>
+                </div>
+                
+                <button type="button" id="addItemButton">Add Another Item</button>
+                
+                <label for="orderDetails">Order Details:</label>
+                <textarea id="orderDetails" name="orderDetails" rows="4" required></textarea>
+                
+                <div id="totalBill" class="total-bill">Total Bill: $0.00</div>
+            
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+    </div>
+    <script src="order.js"></script>
+</body>
+</html>

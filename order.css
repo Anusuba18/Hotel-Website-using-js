@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+
+body {
+    font-family: 'Nova Round', cursive;
+    background: black;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-position: center;
+    background-size: center;
+}
+
+.navbar{
+    width: 90%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -10%;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+}
+
+.navbar ul li::after{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #ff0000;
+    position: absolute;
+    left: 15px;
+    bottom: -10px;
+}
+
+.navbar ul li::after{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #ff0000;
+    position: absolute;
+    left: 15px;
+    bottom: -10px;
+}
+.navbar ul li:hover::after{
+    width: 40%;    
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.logo{
+    width: 30%;
+    cursor: pointer;
+}
+.contact-info{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    margin-left: 12.5%;
+    margin-top: -15%;
+    padding-bottom: 5px;
+}
+
+.card{
+    color: #fff;
+    background: transparent;
+    padding: 0 20px;
+    margin: 0 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.card-icon{
+    font-size: 28px;
+    background: red;
+    width: 65px;
+    height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 60px;
+    transition: 0.3s linear;
+}
+.card:hover .card-icon{
+    background: none;
+    color: red;
+    transform: scale(1.6);
+}
+
+.card p{
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+.card:hover p{
+    max-height: 40px;
+    opacity: 1;
+}
+
+.order-container {
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    height:150%;
+    align-items: center;
+    justify-content: center;
+    margin-top:-3%;
+    padding: 0 20px;
+    margin-left: 30.5%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+select{
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #2d2d2d;
+}
+
+option{
+    background: #333;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #ff0000;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #cc0000;
+}
+header h1 span{
+    color: palegreen;
+}
+input,textarea{
+    background-color: #2d2d2d;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.total-bill {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ff0000;
+}
+
+.item-container {
+    margin-top: 10px;
+}
+
+.item-container label {
+    display: block;
+    margin-top: 5px;
+}
